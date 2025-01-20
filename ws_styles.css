@@ -10,24 +10,44 @@ body {
 }
 
 header {
-    background: linear-gradient(to right, rgba(156, 39, 176, 0.7), rgba(63, 15, 87, 0.7)); /* Прозрачный неоновый градиент для заголовка */
-    text-align: center;
-    padding: 20px;
+    background: linear-gradient(to right, rgba(156, 39, 176, 0.7), rgba(63, 15, 87, 0.7)); /* Прозрачный неоновый градиент */
+    padding: 15px 20px;
+}
+
+.header-container {
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* Логотип, навигация, соцсети */
+    align-items: center; /* Центрируем элементы по вертикали */
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Центрируем изображение логотипа */
+}
+
+.logo-image {
+    height: 100px; /* Высота логотипа */
+    width: auto; /* Сохраняем пропорции */
+}
+
+nav {
+    text-align: center; /* Центрируем навигацию */
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0; /* Убираем отступы */
+    display: inline-flex; /* Выравниваем пункты навигации в строку */
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0 15px; /* Отступы между пунктами навигации */
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #e0e0e0; /* Светлый текст навигации */
+    color: #e0e0e0; /* Цвет текста навигации */
     font-weight: bold;
     transition: color 0.3s;
 }
@@ -36,10 +56,25 @@ nav ul li a:hover {
     color: #ba68c8; /* Неоновый фиолетовый при наведении */
 }
 
+.social-media {
+    display: flex; /* Выравниваем иконки соцсетей в строку */
+    align-items: center; /* Центрируем по вертикали */
+}
+
+.social-icon {
+    width: 50px; /* Ширина иконок соцсетей */
+    height: auto; /* Высота иконок соцсетей */
+    margin-left: 15px; /* Отступ между иконками */
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Увеличиваем кнопку при наведении */
+} 
+
 main {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin: 20px;
 }
 
@@ -82,7 +117,7 @@ main {
 
 .game-image {
     width: 100%; /* Изображение занимает всю ширину карточки */
-    height: auto; /* Автоматическая высота для сохранения пропорций */
+    height: 200px; /* Автоматическая высота для сохранения пропорций */
     object-fit: cover; /* Обеспечиваем, чтобы изображение заполняло область без искажений */
     border-radius: 5px; /* Небольшое скругление углов изображения */
 }
@@ -90,7 +125,7 @@ main {
 h2 {
     color: #f4f4f4; /* Светлый цвет заголовка */
     margin: 10px 0 5px;
-    font-family: 'Courier New', Courier, monospace; /* Интересный шрифт заголовка */
+    font-family: "Montserrat", serif; /* Интересный шрифт заголовка */
     font-size: 24px; /* Размер заголовка */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Легкая тень для текста */
 }
@@ -102,6 +137,20 @@ h2 {
     font-style: italic; /* Курсивный стиль для уровня сложности */
 }
 
+.game-card {
+    background-color: rgba(42, 42, 115, 0.8); /* Полупрозрачный темно-синий для карточек */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); /* Тень для эффекта выпуклости */
+    border-radius: 10px;
+    margin: 15px;
+    padding: 20px;
+    width: 280px;
+    position: relative; /* Для эффекта свечения */
+    display: flex; /* Устанавливаем флекс-контейнер */
+    flex-direction: column; /* Выравниваем элементы по вертикали */
+    justify-content: space-between; /* Распределяем пространство между элементами, прижимая к нижнему краю */
+    height: auto; /* Установим фиксированную высоту карточки для согласованности */
+}
+
 .play-button {
     background-color: #ba68c8; /* Цвет кнопки */
     color: #ffffff; /* Цвет текста кнопки */
@@ -110,7 +159,7 @@ h2 {
     padding: 10px 20px; /* Отступы внутри кнопки */
     cursor: pointer; /* Меняем курсор на указатель */
     transition: background-color 0.3s, transform 0.3s; /* Плавные переходы для цвета и трансформации */
-    margin-top: 15px; /* Отступ сверху от текста */
+    margin-top: auto; /* Прижимаем кнопку книзу */
     font-size: 16px; /* Размер шрифта */
     text-transform: uppercase; /* Сделать текст кнопки заглавными буквами */
 }
@@ -127,7 +176,7 @@ h2 {
     padding: 20px;
     margin: 20px auto; /* Центрируем секцию */
     width: 80%; /* Ширина секции фактов */
-    max-width: 800px; /* Максимальная ширина для больших экранов */
+    max-width: 900px; /* Максимальная ширина для больших экранов */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
     text-align: center; /* Центрируем текст */
 }
@@ -140,13 +189,14 @@ h2 {
 }
 
 .facts-image {
-    width: 100%; /* Полная ширина для изображения */
+    width: 80%; /* Полная ширина для изображения */
     height: auto; /* Автоматическая высота для сохранения пропорций */
-    max-height: 450px; /* Ограничение максимальной высоты для изображения */
     object-fit: cover; /* Обеспечиваем сохранение пропорций */
     border-radius: 10px; /* Скругление углов изображения */
     margin-bottom: 15px; /* Отступ снизу у изображения */
     display: block; /* Отображаем изображение как блок */
+    margin-left: auto;
+    margin-right: auto
 }
 
 .facts-container {
@@ -162,7 +212,17 @@ h2 {
     border-radius: 8px; /* Скругление углов */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Тень для факта */
     transition: transform 0.3s; /* Плавный переход для трансформации при наведении */
-    width: 220px; /* Фиксированная ширина блока факта */
+    width: 250px; /* Фиксированная ширина блока факта */
+    height: 180px;
+    text-align: center; /* Выравнивание текста влево для удобства чтения */
+}
+
+.fact-image {
+    width: 100%; /* Полная ширина для изображения факта */
+    height: 150px; /* Фиксированная высота для изображения факта */
+    object-fit: cover; /* Обеспечивает сохранение пропорций */
+    border-radius: 5px; /* Скругление углов изображения факта */
+    margin-bottom: 10px; /* Отступ снизу у изображения факта */
 }
 
 .fact-item:hover {
@@ -170,17 +230,16 @@ h2 {
 }
 
 .fact-item h3 {
-    color: #f4f4f4; /* Цвет заголовка факта */
-    margin: 0 0 5px; /* Отступы */
-    font-size: 20px; /* Размер заголовка факта */
-    font-family: 'Courier New', Courier, monospace; /* Шрифт заголовка факта */
+    color: #ba68c8; /* Цвет заголовка секции фактов */
+    margin-bottom: 10px;
+    font-size: 25px; /* Размер заголовка */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Легкая тень для текста заголовка */
 }
 
 .fact-item p {
     margin: 0;
     font-size: 16px; /* Размер текста факта */
 }
-
 footer {
     text-align: center;
     padding: 15px;
