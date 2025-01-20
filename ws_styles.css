@@ -1,0 +1,200 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('космос.jfif'); /* Путь к вашему изображению */
+    background-size: cover; /* Масштабируем изображение, чтобы оно полностью заполнило фон */
+    background-position: center; /* Центрируем изображение на фоне */
+    background-repeat: no-repeat; /* Не повторяем изображение */
+    color: #e0e0e0; /* Светлый цвет текста */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(to right, rgba(156, 39, 176, 0.7), rgba(63, 15, 87, 0.7)); /* Прозрачный неоновый градиент для заголовка */
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e0e0e0; /* Светлый текст навигации */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ba68c8; /* Неоновый фиолетовый при наведении */
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.game-card {
+    background-color: rgba(42, 42, 115, 0.8); /* Полупрозрачный темно-синий для карточек */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); /* Тень для эффекта выпуклости */
+    border-radius: 10px;
+    margin: 15px;
+    padding: 20px;
+    width: 280px;
+    position: relative; /* Для эффекта свечения */
+    text-align: center; /* Центрируем текст */
+}
+
+/* Установка свечения в обычном состоянии */
+.game-card::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background-color: rgba(156, 39, 176, 0.5); /* Полупрозрачный фиолетовый цвет */
+    border-radius: 15px; /* Округление области свечения */
+    z-index: -1; /* Помещаем позади карточки */
+    filter: blur(15px); /* Эффект размытия для свечения */
+    transition: opacity 0.3s;
+    opacity: 1; /* Свечение будет видно всегда */
+}
+
+/* Увеличиваем свечение и поднимаем карточку при наведении */
+.game-card:hover {
+    transform: translateY(-10px); /* Поднимаем карточку при наведении */
+}
+
+.game-card:hover::before {
+    opacity: 1; /* Свечение становится более заметным при наведении */
+    filter: blur(20px); /* Увеличиваем размытие для эффекта свечения */
+}
+
+.game-image {
+    width: 100%; /* Изображение занимает всю ширину карточки */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    object-fit: cover; /* Обеспечиваем, чтобы изображение заполняло область без искажений */
+    border-radius: 5px; /* Небольшое скругление углов изображения */
+}
+
+h2 {
+    color: #f4f4f4; /* Светлый цвет заголовка */
+    margin: 10px 0 5px;
+    font-family: 'Courier New', Courier, monospace; /* Интересный шрифт заголовка */
+    font-size: 24px; /* Размер заголовка */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Легкая тень для текста */
+}
+
+.difficulty {
+    font-size: 14px; /* Размер текста для уровня сложности */
+    color: #ba68c8; /* Цвет текста для уровня сложности */
+    margin: 5px 0;
+    font-style: italic; /* Курсивный стиль для уровня сложности */
+}
+
+.play-button {
+    background-color: #ba68c8; /* Цвет кнопки */
+    color: #ffffff; /* Цвет текста кнопки */
+    border: none; /* Убираем рамки */
+    border-radius: 10px; /* Скругляем углы */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    cursor: pointer; /* Меняем курсор на указатель */
+    transition: background-color 0.3s, transform 0.3s; /* Плавные переходы для цвета и трансформации */
+    margin-top: 15px; /* Отступ сверху от текста */
+    font-size: 16px; /* Размер шрифта */
+    text-transform: uppercase; /* Сделать текст кнопки заглавными буквами */
+}
+
+.play-button:hover {
+    background-color: #9c27b0; /* Цвет кнопки при наведении */
+    transform: scale(1.1); /* Увеличиваем кнопку при наведении */
+}
+
+.facts-section {
+    background-color: rgba(42, 42, 115, 0.8); /* Полупрозрачный фон для секции фактов */
+    color: #e0e0e0; /* Цвет текста */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto; /* Центрируем секцию */
+    width: 80%; /* Ширина секции фактов */
+    max-width: 800px; /* Максимальная ширина для больших экранов */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    text-align: center; /* Центрируем текст */
+}
+
+.facts-section h2 {
+    color: #ba68c8; /* Цвет заголовка секции фактов */
+    margin-bottom: 15px;
+    font-size: 28px; /* Размер заголовка */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Легкая тень для текста заголовка */
+}
+
+.facts-image {
+    width: 100%; /* Полная ширина для изображения */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    max-height: 450px; /* Ограничение максимальной высоты для изображения */
+    object-fit: cover; /* Обеспечиваем сохранение пропорций */
+    border-radius: 10px; /* Скругление углов изображения */
+    margin-bottom: 15px; /* Отступ снизу у изображения */
+    display: block; /* Отображаем изображение как блок */
+}
+
+.facts-container {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет блокам адаптироваться к размеру контейнера */
+    justify-content: center; /* Центрируем элементы внутри контейнера */
+    gap: 15px; /* Промежуток между блоками фактов */
+}
+
+.fact-item {
+    background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный белый фон для каждого факта */
+    padding: 15px; /* Отступ внутри факта */
+    border-radius: 8px; /* Скругление углов */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Тень для факта */
+    transition: transform 0.3s; /* Плавный переход для трансформации при наведении */
+    width: 220px; /* Фиксированная ширина блока факта */
+}
+
+.fact-item:hover {
+    transform: translateY(-5px); /* Поднимаем факт при наведении */
+}
+
+.fact-item h3 {
+    color: #f4f4f4; /* Цвет заголовка факта */
+    margin: 0 0 5px; /* Отступы */
+    font-size: 20px; /* Размер заголовка факта */
+    font-family: 'Courier New', Courier, monospace; /* Шрифт заголовка факта */
+}
+
+.fact-item p {
+    margin: 0;
+    font-size: 16px; /* Размер текста факта */
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: rgba(63, 15, 87, 0.8); /* Прозрачный фон для подвала */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+h1 {
+    color: #e0e0e0; /* Светлый заголовок */
+    margin: 0;
+}
+
+h2 {
+    color: #9c27b0; /* Яркий неоновый фиолетовый заголовков секций */
+}
