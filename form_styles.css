@@ -10,10 +10,10 @@ body {
 }
 
 .header-container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto 1fr auto; 
     align-items: center;
-    padding: 15px 20px;
+    grid-template-rows: 85px;
 }
 
 header {
@@ -23,17 +23,61 @@ header {
     right: 0; 
     z-index: 1000; 
     background: linear-gradient(to right, rgba(156, 39, 176, 0.95), rgba(63, 15, 87, 0.95)); 
-    padding: 15px 20px;
+    padding: 15px 30px;
+    height: 80px;
 }
 
 .logo-image {
-    height: 100px; 
+    height: 90px; 
     width: auto; 
 }
 
 nav {
-    flex-grow: 1; 
-    text-align: center; 
+    display: flex;
+    flex-direction: column; /* Установить направление в колонку */
+    align-items: center; /* Центрировать элементы по горизонтали */
+}
+
+.main-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; 
+    display: inline-flex; 
+}
+
+.main-menu li {
+    margin: 0 15px; 
+}
+
+.main-menu li a {
+    text-decoration: none;
+    color: #e0e0e0; 
+    font-weight: bold;
+    font-size: 18px; /* Больший размер для игр */
+    transition: color 0.3s;
+}
+
+.secondary-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; 
+    display: inline-flex; 
+    margin-top: 10px; /* Отступ для нижнего меню */
+}
+
+.secondary-menu li {
+    margin: 0 15px; 
+}
+
+.secondary-menu li a {
+    text-decoration: none;
+    color: #e0e0e0; 
+    font-size: 14px; /* Меньший размер для фактов и формы */
+    transition: color 0.3s;
+}
+
+.secondary-menu li a:hover {
+    color: #ba68c8; /* Цвет при наведении */
 }
 
 nav ul {
@@ -66,15 +110,21 @@ nav ul li a:hover {
 .social-icon {
     width: 50px; 
     height: auto; 
-    margin-left: 15px; 
+    margin-left: 15px;
+    transition: transform 0.3s; 
 }
 
 .social-icon:hover {
     transform: scale(1.1); 
 }
 
+.logo:hover {
+    transform: scale(1.1);
+}
+
 main {
-    margin-top: 200px; 
+    margin-top: 145px; 
+    margin-bottom: 50px;
 }
 
 .form-section {
@@ -89,16 +139,23 @@ main {
     text-align: left; 
 }
 
-.form-title, .fieldset-title {
+.form-title {
     margin-bottom: 15px;
-    font-size: 28px;
-    color: #ba68c8;
+    font-size: 33px;
+    color: #e151fa;
     text-align: center; 
 }
 
+.fieldset-title {
+    margin-bottom: 15px;
+    font-size: 27px;
+    color: #ee8fff;
+    text-align: center;
+}
 .feedback-form {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .feedback-form fieldset {
@@ -127,6 +184,12 @@ main {
     color: #e0e0e0;
 }
 
+.feedback-form input::placeholder,
+.feedback-form textarea::placeholder {
+    color: #ffffff; 
+    opacity: 0.8; 
+}
+
 .feedback-form button.submit-button {
     background-color: #d616f8;
     color: #ffffff;
@@ -136,7 +199,8 @@ main {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
     margin-top: 20px; 
-    width: 150px;
+    width: 250px;
+    font-size: 16px;
 }
 
 .feedback-form button.submit-button:hover {
@@ -145,8 +209,11 @@ main {
 }
 
 footer {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 15px;
     background: rgba(63, 15, 87, 0.8); 
     width: 100%;
+    height: 70px;
 }

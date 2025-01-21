@@ -7,27 +7,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Головоломки - Игры</title>
+    <title>Головоломки</title>
 </head>
 <body>
     <header>
         <div class="header-container">
             <div class="logo">
-                <img src="лого.png" alt="Логотип" class="logo-image"> <!-- Замените на ваше изображение логотипа -->
+                <img src="лого.png" alt="Логотип" class="logo-image">
             </div>
             <nav>
-                <ul>
+                <ul class="main-menu">
                     <li><a href="#tictactoe">Крестики-нолики</a></li>
                     <li><a href="#battleship">Морской бой</a></li>
                     <li><a href="#sudoku">Судоку</a></li>
                     <li><a href="#2048">2048</a></li>
                     <li><a href="#fifteen">Пятнашки</a></li>
+                </ul>
+                <ul class="secondary-menu">
                     <li><a href="#fun-facts">Интересные факты</a></li>
-                    <li><a href="form.html">Регистрация</a></li>
+                    <li><a href="#forma">Форма</a></li>
                 </ul>
             </nav>
             <div class="social-media">
-                <a href="#"><img src="fb.png" alt="Facebook" class="social-icon"></a> <!-- Замените на вашей иконке -->
+                <a href="#"><img src="fb.png" alt="Facebook" class="social-icon"></a>
                 <a href="#"><img src="tg.png" alt="Telegram" class="social-icon"></a>
                 <a href="#"><img src="vk.png" alt="VK" class="social-icon"></a>
             </div>
@@ -78,7 +80,7 @@
 
     <section id="fun-facts" class="facts-section">
         <h2>Интересные факты об играх</h2>
-        <img src="факты3.png" alt="Интересные факты" class="facts-image"> <!-- Замените на ваше изображение -->
+        <img src="факты3.png" alt="Интересные факты" class="facts-image">
         <div class="facts-container">
             <div class="fact-item">
                 <h3>Крестики-нолики</h3>
@@ -103,7 +105,7 @@
         </div>
     </section>
 
-    <section class="text-image-section">
+    <section id="forma" class="text-image-section">
         <div class="text-container">
             <h2>Дорогие пользователи!</h2>
             <p>Предлагаем вам заполнить форму для повышения качества наших услуг.
@@ -117,10 +119,10 @@
             <p>
                 Присоединяйтесь к опросу и помогите нам стать лучше!
             </p>
-            <button class="play-button">Заполнить форму</button>
+            <a href="form.html" class="play-button">Заполнить форму</a>
         </div>
         <div class="image-container">
-            <img src="ваше_изображение.jpg" alt="Описание изображения" class="section-image">
+            <img src="forma.PNG" alt="Описание изображения" class="section-image">
         </div>
     </section>
 
