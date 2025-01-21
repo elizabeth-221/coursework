@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form_styles.css"> <!-- Подключаем отдельный файл стилей -->
+    <title>Форма для обратной связи</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="web-site.html"><img src="лого.png" alt="Логотип" class="logo-image"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#tictactoe">Крестики-нолики</a></li>
+                    <li><a href="index.html#battleship">Морской бой</a></li>
+                    <li><a href="index.html#sudoku">Судоку</a></li>
+                    <li><a href="index.html#2048">2048</a></li>
+                    <li><a href="index.html#fifteen">Пятнашки</a></li>
+                    <li><a href="index.html#fun-facts">Интересные факты</a></li>
+                    <li><a href="form.html">Форма</a></li>
+                </ul>
+            </nav>
+            <div class="social-media">
+                <a href="#"><img src="fb.png" alt="Facebook" class="social-icon"></a>
+                <a href="#"><img src="tg.png" alt="Telegram" class="social-icon"></a>
+                <a href="#"><img src="vk.png" alt="VK" class="social-icon"></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2 class="form-title">Форма для обратной связи</h2>
+            <form class="feedback-form">
+                <fieldset>
+                    <legend class="fieldset-title">Личная информация</legend>
+                    <label for="name">Имя <span class="required">*</span>:</label>
+                    <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+
+                    <label for="dob">Дата рождения (необязательное поле):</label>
+                    <input type="date" id="dob" name="dob">
+
+                    <label for="gender">Пол (необязательное поле):</label>
+                    <select id="gender" name="gender">
+                        <option value="">Выберите</option>
+                        <option value="male">Мужской</option>
+                        <option value="female">Женский</option>
+                        <option value="other">Другой</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend class="fieldset-title">Ваше мнение о нас</legend>
+                    <label for="favorite-game">Лучшая игра на ваш взгляд <span class="required">*</span>:</label>
+                    <select id="favorite-game" name="favorite-game" required>
+                        <option value="">Выберите</option>
+                        <option value="tictactoe">Крестики-нолики</option>
+                        <option value="battleship">Морской бой</option>
+                        <option value="sudoku">Судоку</option>
+                        <option value="2048">2048</option>
+                        <option value="fifteen">Пятнашки</option>
+                    </select>
+
+                    <label for="design-rating">Оцените дизайн <span class="required">*</span>:</label>
+                    <select id="design-rating" name="design-rating" required>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+
+                    <label for="functionality-rating">Оцените функционал <span class="required">*</span>:</label>
+                    <select id="functionality-rating" name="functionality-rating" required>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+
+                    <label for="game-quality-rating">Оцените качество игр <span class="required">*</span>:</label>
+                    <select id="game-quality-rating" name="game-quality-rating" required>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+
+                    <label for="feedback">Оставьте отзыв:</label>
+                    <textarea id="feedback" name="feedback" rows="4" placeholder="Введите ваши комментарии"></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend class="fieldset-title">Контактные данные</legend>
+                    <label for="contact-info-phone">Введите ваш телефон <span class="required">*</span>:</label>
+                    <input type="text" id="contact-info-phone" name="contact-info-phone" required placeholder="Введите телефон">
+
+                    <label for="contact-info-email">Введите ваш email:</label>
+                    <input type="email" id="contact-info-email" name="contact-info-email" placeholder="Введите email">
+                </fieldset>
+
+                <button type="submit" class="submit-button">Отправить результаты</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Головоломки. Все права защищены.</p>
+    </footer>
+</body>
+</html>

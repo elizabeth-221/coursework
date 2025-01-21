@@ -1,0 +1,152 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('космос.jfif'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: #e0e0e0; 
+    margin: 0;
+    padding: 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+header {
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    right: 0; 
+    z-index: 1000; 
+    background: linear-gradient(to right, rgba(156, 39, 176, 0.95), rgba(63, 15, 87, 0.95)); 
+    padding: 15px 20px;
+}
+
+.logo-image {
+    height: 100px; 
+    width: auto; 
+}
+
+nav {
+    flex-grow: 1; 
+    text-align: center; 
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; 
+    display: inline-flex; 
+}
+
+nav ul li {
+    margin: 0 15px; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e0e0e0; 
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ba68c8; 
+}
+
+.social-media {
+    display: flex; 
+    align-items: center; 
+}
+
+.social-icon {
+    width: 50px; 
+    height: auto; 
+    margin-left: 15px; 
+}
+
+.social-icon:hover {
+    transform: scale(1.1); 
+}
+
+main {
+    margin-top: 200px; 
+}
+
+.form-section {
+    background-color: rgba(42, 42, 115, 0.8);
+    color: #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto; 
+    width: 90%; 
+    max-width: 500px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    text-align: left; 
+}
+
+.form-title, .fieldset-title {
+    margin-bottom: 15px;
+    font-size: 28px;
+    color: #ba68c8;
+    text-align: center; 
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-form fieldset {
+    border: none; 
+    margin: 15px 0; 
+}
+
+.feedback-form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.required {
+    color: red;
+}
+
+.feedback-form input,
+.feedback-form textarea,
+.feedback-form select {
+    width: 100%; 
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+}
+
+.feedback-form button.submit-button {
+    background-color: #d616f8;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px; 
+    width: 150px;
+}
+
+.feedback-form button.submit-button:hover {
+    background-color: #9c27b0;
+    transform: scale(1.1);
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: rgba(63, 15, 87, 0.8); 
+    width: 100%;
+}

@@ -1,74 +1,79 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url('космос.jfif'); /* Путь к вашему изображению */
-    background-size: cover; /* Масштабируем изображение, чтобы оно полностью заполнило фон */
-    background-position: center; /* Центрируем изображение на фоне */
-    background-repeat: no-repeat; /* Не повторяем изображение */
-    color: #e0e0e0; /* Светлый цвет текста */
+    background-image: url('космос.jfif');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    color: #e0e0e0; 
     margin: 0;
     padding: 0;
 }
 
 header {
-    background: linear-gradient(to right, rgba(156, 39, 176, 0.7), rgba(63, 15, 87, 0.7)); /* Прозрачный неоновый градиент */
+    position: fixed; 
+    top: 0;
+    left: 0; 
+    right: 0;
+    z-index: 1000;
+    background: linear-gradient(to right, rgba(156, 39, 176, 0.95), rgba(63, 15, 87, 0.95)); 
     padding: 15px 20px;
 }
 
 .header-container {
     display: grid;
-    grid-template-columns: auto 1fr auto; /* Логотип, навигация, соцсети */
-    align-items: center; /* Центрируем элементы по вертикали */
+    grid-template-columns: auto 1fr auto; 
+    align-items: center;
 }
 
 .logo {
     display: flex;
-    align-items: center; /* Центрируем изображение логотипа */
+    align-items: center;
 }
 
 .logo-image {
-    height: 100px; /* Высота логотипа */
-    width: auto; /* Сохраняем пропорции */
+    height: 100px;
+    width: auto;
 }
 
 nav {
-    text-align: center; /* Центрируем навигацию */
+    text-align: center; 
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
-    margin: 0; /* Убираем отступы */
-    display: inline-flex; /* Выравниваем пункты навигации в строку */
+    margin: 0;
+    display: inline-flex; 
 }
 
 nav ul li {
-    margin: 0 15px; /* Отступы между пунктами навигации */
+    margin: 0 15px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #e0e0e0; /* Цвет текста навигации */
+    color: #e0e0e0; 
     font-weight: bold;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ba68c8; /* Неоновый фиолетовый при наведении */
+    color: #ba68c8; 
 }
 
 .social-media {
-    display: flex; /* Выравниваем иконки соцсетей в строку */
-    align-items: center; /* Центрируем по вертикали */
+    display: flex; 
+    align-items: center; 
 }
 
 .social-icon {
-    width: 50px; /* Ширина иконок соцсетей */
-    height: auto; /* Высота иконок соцсетей */
-    margin-left: 15px; /* Отступ между иконками */
+    width: 50px;
+    height: auto; 
+    margin-left: 15px; 
 }
 
 .social-icon:hover {
-    transform: scale(1.1); /* Увеличиваем кнопку при наведении */
+    transform: scale(1.1); 
 } 
 
 main {
@@ -76,20 +81,20 @@ main {
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin: 20px;
+    margin-top: 150px;
 }
 
 .game-card {
-    background-color: rgba(42, 42, 115, 0.8); /* Полупрозрачный темно-синий для карточек */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); /* Тень для эффекта выпуклости */
+    background-color: rgba(42, 42, 115, 0.8); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); 
     border-radius: 10px;
     margin: 15px;
     padding: 20px;
     width: 280px;
-    position: relative; /* Для эффекта свечения */
-    text-align: center; /* Центрируем текст */
+    position: relative;
+    text-align: center; 
 }
 
-/* Установка свечения в обычном состоянии */
 .game-card::before {
     content: '';
     position: absolute;
@@ -97,163 +102,185 @@ main {
     left: -10px;
     right: -10px;
     bottom: -10px;
-    background-color: rgba(156, 39, 176, 0.5); /* Полупрозрачный фиолетовый цвет */
-    border-radius: 15px; /* Округление области свечения */
-    z-index: -1; /* Помещаем позади карточки */
-    filter: blur(15px); /* Эффект размытия для свечения */
+    background-color: rgba(156, 39, 176, 0.5);
+    border-radius: 15px; 
+    z-index: -1; 
+    filter: blur(15px); 
     transition: opacity 0.3s;
-    opacity: 1; /* Свечение будет видно всегда */
+    opacity: 1; 
 }
 
-/* Увеличиваем свечение и поднимаем карточку при наведении */
+
 .game-card:hover {
-    transform: translateY(-10px); /* Поднимаем карточку при наведении */
+    transform: translateY(-10px); 
 }
 
 .game-card:hover::before {
-    opacity: 1; /* Свечение становится более заметным при наведении */
-    filter: blur(20px); /* Увеличиваем размытие для эффекта свечения */
+    opacity: 1; 
+    filter: blur(20px); 
 }
 
 .game-image {
-    width: 100%; /* Изображение занимает всю ширину карточки */
-    height: 200px; /* Автоматическая высота для сохранения пропорций */
-    object-fit: cover; /* Обеспечиваем, чтобы изображение заполняло область без искажений */
-    border-radius: 5px; /* Небольшое скругление углов изображения */
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 5px; 
 }
 
 h2 {
-    color: #f4f4f4; /* Светлый цвет заголовка */
+    color: #f4f4f4; 
     margin: 10px 0 5px;
-    font-family: "Montserrat", serif; /* Интересный шрифт заголовка */
-    font-size: 24px; /* Размер заголовка */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Легкая тень для текста */
+    font-family: "Montserrat", serif; 
+    font-size: 24px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 .difficulty {
-    font-size: 14px; /* Размер текста для уровня сложности */
-    color: #ba68c8; /* Цвет текста для уровня сложности */
+    font-size: 14px;
+    color: #ba68c8;
     margin: 5px 0;
-    font-style: italic; /* Курсивный стиль для уровня сложности */
+    font-style: italic;
 }
 
 .game-card {
-    background-color: rgba(42, 42, 115, 0.8); /* Полупрозрачный темно-синий для карточек */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); /* Тень для эффекта выпуклости */
+    background-color: rgba(42, 42, 115, 0.8); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); 
     border-radius: 10px;
     margin: 15px;
     padding: 20px;
     width: 280px;
-    position: relative; /* Для эффекта свечения */
-    display: flex; /* Устанавливаем флекс-контейнер */
-    flex-direction: column; /* Выравниваем элементы по вертикали */
-    justify-content: space-between; /* Распределяем пространство между элементами, прижимая к нижнему краю */
-    height: auto; /* Установим фиксированную высоту карточки для согласованности */
+    position: relative; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between; 
+    height: auto; 
 }
 
 .play-button {
-    background-color: #ba68c8; /* Цвет кнопки */
-    color: #ffffff; /* Цвет текста кнопки */
-    border: none; /* Убираем рамки */
-    border-radius: 10px; /* Скругляем углы */
-    padding: 10px 20px; /* Отступы внутри кнопки */
-    cursor: pointer; /* Меняем курсор на указатель */
-    transition: background-color 0.3s, transform 0.3s; /* Плавные переходы для цвета и трансформации */
-    margin-top: auto; /* Прижимаем кнопку книзу */
-    font-size: 16px; /* Размер шрифта */
-    text-transform: uppercase; /* Сделать текст кнопки заглавными буквами */
+    background-color: #d616f8; 
+    color: #ffffff; 
+    border: none; 
+    border-radius: 10px; 
+    padding: 10px 20px; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; 
+    margin-top: auto; 
+    font-size: 16px; 
+    text-transform: uppercase; 
 }
 
 .play-button:hover {
-    background-color: #9c27b0; /* Цвет кнопки при наведении */
-    transform: scale(1.1); /* Увеличиваем кнопку при наведении */
+    background-color: #9c27b0;
+    transform: scale(1.1); 
 }
 
 .facts-section {
-    background-color: rgba(42, 42, 115, 0.8); /* Полупрозрачный фон для секции фактов */
-    color: #e0e0e0; /* Цвет текста */
+    background-color: rgba(42, 42, 115, 0.8); 
+    color: #e0e0e0;
     border-radius: 10px;
     padding: 20px;
-    margin: 20px auto; /* Центрируем секцию */
-    width: 80%; /* Ширина секции фактов */
-    max-width: 900px; /* Максимальная ширина для больших экранов */
+    margin: 20px auto;
+    width: 80%; 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
-    text-align: center; /* Центрируем текст */
+    text-align: center; 
 }
 
 .facts-section h2 {
-    color: #ba68c8; /* Цвет заголовка секции фактов */
+    color: #ba68c8; 
     margin-bottom: 15px;
-    font-size: 28px; /* Размер заголовка */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Легкая тень для текста заголовка */
+    font-size: 28px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); 
 }
 
 .facts-image {
-    width: 80%; /* Полная ширина для изображения */
-    height: auto; /* Автоматическая высота для сохранения пропорций */
-    object-fit: cover; /* Обеспечиваем сохранение пропорций */
-    border-radius: 10px; /* Скругление углов изображения */
-    margin-bottom: 15px; /* Отступ снизу у изображения */
-    display: block; /* Отображаем изображение как блок */
+    width: 80%; 
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: block;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
 }
 
 .facts-container {
     display: flex;
-    flex-wrap: wrap; /* Позволяет блокам адаптироваться к размеру контейнера */
-    justify-content: center; /* Центрируем элементы внутри контейнера */
-    gap: 15px; /* Промежуток между блоками фактов */
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 15px; 
 }
 
 .fact-item {
-    background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный белый фон для каждого факта */
-    padding: 15px; /* Отступ внутри факта */
-    border-radius: 8px; /* Скругление углов */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Тень для факта */
-    transition: transform 0.3s; /* Плавный переход для трансформации при наведении */
-    width: 250px; /* Фиксированная ширина блока факта */
+    background-color: rgba(255, 255, 255, 0.1); 
+    padding: 15px;
+    border-radius: 8px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); 
+    transition: transform 0.3s; 
+    width: 250px; 
     height: 180px;
-    text-align: center; /* Выравнивание текста влево для удобства чтения */
+    text-align: center; 
 }
 
 .fact-image {
-    width: 100%; /* Полная ширина для изображения факта */
-    height: 150px; /* Фиксированная высота для изображения факта */
-    object-fit: cover; /* Обеспечивает сохранение пропорций */
-    border-radius: 5px; /* Скругление углов изображения факта */
-    margin-bottom: 10px; /* Отступ снизу у изображения факта */
+    width: 100%; 
+    height: 150px; 
+    object-fit: cover; 
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 .fact-item:hover {
-    transform: translateY(-5px); /* Поднимаем факт при наведении */
+    transform: translateY(-5px); 
 }
 
 .fact-item h3 {
-    color: #ba68c8; /* Цвет заголовка секции фактов */
+    color: #d616f8;
     margin-bottom: 10px;
-    font-size: 25px; /* Размер заголовка */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Легкая тень для текста заголовка */
+    font-size: 25px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 .fact-item p {
     margin: 0;
-    font-size: 16px; /* Размер текста факта */
+    font-size: 16px;
 }
 footer {
     text-align: center;
     padding: 15px;
-    background: rgba(63, 15, 87, 0.8); /* Прозрачный фон для подвала */
+    background: rgba(63, 15, 87, 0.8); 
     position: relative;
     bottom: 0;
     width: 100%;
 }
 
 h1 {
-    color: #e0e0e0; /* Светлый заголовок */
+    color: #e0e0e0; 
     margin: 0;
 }
 
 h2 {
-    color: #9c27b0; /* Яркий неоновый фиолетовый заголовков секций */
+    color: #d616f8;
+}
+
+.text-image-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    margin: 20px auto;
+    background-color: rgba(42, 42, 115, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+}
+
+.text-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.section-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; 
 }
