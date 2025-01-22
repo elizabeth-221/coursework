@@ -1,12 +1,23 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url('космос.jfif'); 
-    background-size: cover; 
+    background-image: url('fon.jpg');
+    background-size: cover;
     background-position: center; 
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     color: #e0e0e0; 
     margin: 0;
     padding: 0;
+}
+
+header {
+    position: fixed; 
+    top: 0;
+    left: 0; 
+    right: 0;
+    z-index: 1000;
+    background: linear-gradient(to right, rgba(156, 39, 176, 0.7), rgba(63, 15, 87, 0.7)); 
+    padding: 15px 30px;
+    height: 80px;
 }
 
 .header-container {
@@ -16,26 +27,20 @@ body {
     grid-template-rows: 85px;
 }
 
-header {
-    position: fixed; 
-    top: 0; 
-    left: 0;
-    right: 0; 
-    z-index: 1000; 
-    background: linear-gradient(to right, rgba(156, 39, 176, 0.95), rgba(63, 15, 87, 0.95)); 
-    padding: 15px 30px;
-    height: 80px;
+.logo {
+    display: flex;
+    align-items: center;
 }
 
 .logo-image {
-    height: 90px; 
-    width: auto; 
+    height: 100px;
+    width: auto;
 }
 
 nav {
     display: flex;
-    flex-direction: column; /* Установить направление в колонку */
-    align-items: center; /* Центрировать элементы по горизонтали */
+    flex-direction: column;
+    align-items: center;
 }
 
 .main-menu {
@@ -53,7 +58,7 @@ nav {
     text-decoration: none;
     color: #e0e0e0; 
     font-weight: bold;
-    font-size: 18px; /* Больший размер для игр */
+    font-size: 23px;
     transition: color 0.3s;
 }
 
@@ -62,7 +67,7 @@ nav {
     padding: 0;
     margin: 0; 
     display: inline-flex; 
-    margin-top: 10px; /* Отступ для нижнего меню */
+    margin-top: 10px;
 }
 
 .secondary-menu li {
@@ -71,13 +76,13 @@ nav {
 
 .secondary-menu li a {
     text-decoration: none;
-    color: #e0e0e0; 
-    font-size: 14px; /* Меньший размер для фактов и формы */
+    color: #bab9b9; 
+    font-size: 18px;
     transition: color 0.3s;
 }
 
 .secondary-menu li a:hover {
-    color: #ba68c8; /* Цвет при наведении */
+    color: #ba68c8;
 }
 
 nav ul {
@@ -123,33 +128,39 @@ nav ul li a:hover {
 }
 
 main {
-    margin-top: 145px; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 180px; 
     margin-bottom: 50px;
 }
 
 .form-section {
-    background-color: rgba(42, 42, 115, 0.8);
+    background-color: rgba(118, 100, 234, 0.8);
     color: #e0e0e0;
     border-radius: 10px;
     padding: 20px;
     margin: 0 auto; 
     width: 90%; 
     max-width: 500px; 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 20px rgb(115, 0, 255),
+                0 0 40px rgba(115, 0, 255, 0.8),
+                0 0 80px rgba(115, 0, 255, 0.6);
     text-align: left; 
 }
 
 .form-title {
     margin-bottom: 15px;
     font-size: 33px;
-    color: #e151fa;
+    color: #e270f6;
     text-align: center; 
 }
 
 .fieldset-title {
     margin-bottom: 15px;
     font-size: 27px;
-    color: #ee8fff;
+    color: #f0a3fd;
     text-align: center;
 }
 .feedback-form {
@@ -175,7 +186,7 @@ main {
 .feedback-form input,
 .feedback-form textarea,
 .feedback-form select {
-    width: 100%; 
+    width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     border: none;

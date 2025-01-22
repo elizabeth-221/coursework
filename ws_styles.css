@@ -39,8 +39,8 @@ header {
 
 nav {
     display: flex;
-    flex-direction: column; /* Установить направление в колонку */
-    align-items: center; /* Центрировать элементы по горизонтали */
+    flex-direction: column;
+    align-items: center;
 }
 
 .main-menu {
@@ -58,7 +58,7 @@ nav {
     text-decoration: none;
     color: #e0e0e0; 
     font-weight: bold;
-    font-size: 23px; /* Больший размер для игр */
+    font-size: 23px; 
     transition: color 0.3s;
 }
 
@@ -67,7 +67,7 @@ nav {
     padding: 0;
     margin: 0; 
     display: inline-flex; 
-    margin-top: 10px; /* Отступ для нижнего меню */
+    margin-top: 10px;
 }
 
 .secondary-menu li {
@@ -76,13 +76,13 @@ nav {
 
 .secondary-menu li a {
     text-decoration: none;
-    color: #cbcaca; 
-    font-size: 18px; /* Меньший размер для фактов и формы */
+    color: #bab9b9; 
+    font-size: 18px;
     transition: color 0.3s;
 }
 
 .secondary-menu li a:hover {
-    color: #ba68c8; /* Цвет при наведении */
+    color: #ba68c8;
 }
 
 nav ul {
@@ -116,6 +116,7 @@ nav ul li a:hover {
     width: 50px;
     height: auto; 
     margin-left: 15px; 
+    transition: transform 0.3s;
 }
 
 .social-icon:hover {
@@ -131,8 +132,8 @@ main {
 }
 
 .game-card {
-    background-color: rgba(193, 98, 252, 0.461); /* Фоновый цвет карточки */
-    border-radius: 10px; /* Закругление углов карточки */
+    background-color: rgba(193, 98, 252, 0.7);
+    border-radius: 10px;
     margin: 40px;
     padding: 20px;
     width: 280px;
@@ -143,17 +144,16 @@ main {
     align-items: center;
     text-align: center;
     height: auto; 
-    box-shadow: 0 0 20px rgba(204, 153, 255, 1), /* Яркое неоновое свечение */
+    box-shadow: 0 0 20px rgba(204, 153, 255, 1),
                 0 0 30px rgba(204, 153, 255, 0.7),
-                0 0 60px rgba(204, 153, 255, 0.4); /* Лавандово-фиолетовое свечение */
-    transition: transform 0.3s ease; /* Плавный переход для трансформации */
+                0 0 60px rgba(204, 153, 255, 0.4);
+    transition: transform 0.3s ease;
 }
 
 .game-card:hover {
-    transform: translateY(-10px); /* Поднимаем карточку при наведении */
+    transform: translateY(-10px);
 }
 
-/* Дополнительно, если необходимо сделать свечение еще более заметным */
 .game-card::before {
     content: '';
     position: absolute;
@@ -161,14 +161,13 @@ main {
     left: -5px;
     right: -5px;
     bottom: -5px;
-    background-color: transparent; /* Прозрачный фон для эффекта */
-    border-radius: 15px; /* Закругление углов для эффекта */
-    box-shadow: 0 0 20px rgba(204, 153, 255, 1), /* Яркое неоновое свечение */
+    background-color: transparent;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(204, 153, 255, 1), 
                 0 0 40px rgba(204, 153, 255, 0.7),
-                0 0 80px rgba(204, 153, 255, 0.4); /* Лавандово-фиолетовое свечение */
-    z-index: -1; /* Помещаем за карточкой */
+                0 0 80px rgba(204, 153, 255, 0.4); 
+    z-index: -1; 
 }
-
 
 .game-card:hover {
     transform: translateY(-10px); 
@@ -199,15 +198,14 @@ h2 {
     color: #df98eb;
     margin: 5px 0;
     font-style: italic;
-    background-color: #e47af7e0; /* Цвет овала */
-    color: #ffffff; /* Цвет текста внутри овала */
-    border-radius: 50px; /* Скругление углов для овала */
-    padding: 5px 15px; /* Внутренние отступы для овала */
-    font-weight: bold; /* Жирный шрифт для текста */
-    display: inline-block; /* Отображение как встроенного блока */
-    margin: 10px auto; /* Центрирование овала */
+    background-color: #e47af7e0;
+    color: #ffffff; 
+    border-radius: 50px;
+    padding: 5px 15px; 
+    font-weight: bold; 
+    display: inline-block; 
+    margin: 10px auto; 
 }
-
 
 .play-button {
     display: inline-block;
@@ -242,9 +240,9 @@ h2 {
 }
 
 .facts-section h2 {
-    color: #ba68c8; 
+    color: #eda3fa; 
     margin-bottom: 15px;
-    font-size: 28px;
+    font-size: 35px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); 
 }
 
@@ -267,7 +265,7 @@ h2 {
 }
 
 .fact-item {
-    background-color: rgba(36, 15, 118, 0.1); 
+    background-color: rgba(69, 35, 208, 0.358); 
     padding: 15px;
     border-radius: 8px; 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); 
@@ -343,18 +341,18 @@ h2 {
 }
 
 .section-image {
-    max-width: 80%; /* Максимальная ширина изображения */
-    height: auto; /* Высота будет автоматически корректироваться для сохранения пропорций */
-    border-radius: 20px; /* Закругление углов изображения */
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8), /* Неоновый свет */
+    max-width: 80%; 
+    height: auto; 
+    border-radius: 20px; 
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8), 
                 0 0 30px rgba(0, 255, 255, 0.6),
                 0 0 60px rgba(0, 255, 255, 0.4); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавный переход для трансформации и тени */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .section-image:hover {
-    transform: translateY(-10px) scale(1.05); /* Поднимаем изображение и увеличиваем его размер */
-    box-shadow: 0 0 20px rgba(0, 255, 255, 1), /* Увеличение тени при наведении */
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 1),
                 0 0 40px rgba(0, 255, 255, 0.8),
                 0 0 80px rgba(0, 255, 255, 0.6);
 }
