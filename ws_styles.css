@@ -4,7 +4,7 @@ body {
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat;
-    color: #e0e0e0; 
+    color: #ffffff; 
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -22,7 +22,6 @@ header {
     z-index: 100;
     background: linear-gradient(to right, rgba(156, 39, 176, 0.7), rgba(63, 15, 87, 0.7)); 
     padding: 15px 30px;
-    height: 80px;
 }
 
 .header-container {
@@ -30,6 +29,7 @@ header {
     grid-template-columns: auto 1fr auto; 
     align-items: center;
     grid-template-rows: 85px;
+    height: auto;
 }
 
 .logo-image {
@@ -41,24 +41,6 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: inline-flex; 
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #e0e0e0; 
-    font-weight: bold;
-    transition: color 0.3s;
 }
 
 nav ul li a:hover {
@@ -80,7 +62,7 @@ nav ul li a:hover {
     text-decoration: none;
     color: #ffffff; 
     font-weight: bold;
-    font-size: 23px; 
+    font-size: 25px; 
     transition: color 0.3s;
 }
 
@@ -99,12 +81,8 @@ nav ul li a:hover {
 .secondary-menu li a {
     text-decoration: none;
     color: #bab9b9; 
-    font-size: 18px;
+    font-size: 20px;
     transition: color 0.3s;
-}
-
-.secondary-menu li a:hover {
-    color: #ba68c8;
 }
 
 .social-media {
@@ -222,6 +200,11 @@ main {
     text-decoration: none;
 }
 
+.play-button a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
 .play-button:hover {
     background-color: #9c27b0;
     transform: scale(1.1); 
@@ -298,7 +281,6 @@ main {
     font-size: 16px;
 }
 
-
 .text-image-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -338,8 +320,140 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding: 15px 20px;
     background: rgba(63, 15, 87, 0.8); 
     width: 100%;
     height: 70px;
+    margin: 0 auto; 
+    text-align: center;
+}
+
+
+@media (max-width: 767px) { /* Телефоны */
+    
+    header { 
+        padding: 10px 3px;
+        width: 100%;
+    }
+
+    .header-container {
+        width: 95%;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto; 
+    }
+
+    a {
+        text-decoration: none;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+
+    .logo-image {
+        height: 50px;
+    }
+
+    .main-menu li {
+        margin: 0 2px;
+    }
+
+    .secondary-menu li {
+        margin: 0 5px;
+    }
+
+    .main-menu li a {
+        font-size: 7px;
+    }
+
+    .secondary-menu li a {
+        font-size: 7px;
+    }
+
+    .social-media {
+        margin-left: auto; 
+        flex-direction: column;
+    }
+
+    .social-icon {
+        width: 20px; 
+        margin-left: 5px;
+    }
+    
+    .game-card {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .facts-image {
+        width: 100%;
+    }
+   
+    .text-image-section {
+        display: grid;
+        grid-template-columns: auto 90px 90px; 
+        grid-template-rows: 330px auto 55px;
+        grid-template-areas: 
+            "image image image"
+            "text text text"
+            "button button button";
+        justify-items: stretch;
+        align-items: stretch;
+    }
+    
+    .text-container {
+        grid-area: text;
+        padding: 10px;
+        font-size: 16px;
+        width: 100%;
+    }
+    
+    .image-container {
+        grid-area: image;
+        justify-self: center;
+        align-self: center;
+        margin-left: 20px;
+    }
+    
+    .section-image {
+        width: 170px;
+        margin-top: 10px;
+    }
+    
+    .play-button {
+        grid-area: button;
+        margin-top: 15px;
+    }
+
+    footer {
+        padding: 10px 10px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) { /* Планшеты */
+
+    .main-menu li {
+        margin: 0 7px;
+    }
+
+    .secondary-menu li {
+        margin: 0 5px;
+    }
+
+    .main-menu li a {
+        font-size: 19px;
+    }
+
+    .secondary-menu li a {
+        font-size: 17px;
+    }
+
+    .social-media {
+        flex-direction: column;
+    }
+
+    .social-icon {
+        width: 30px;
+        margin-left: 5px;
+    }
 }

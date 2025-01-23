@@ -15,24 +15,32 @@ html {
 }
 
 header {
-    position: fixed;
+    position: fixed; 
     top: 0;
-    left: 0;
+    left: 0; 
     right: 0;
     z-index: 100;
-    background: linear-gradient(to right, rgba(156, 39, 176, 0.7), rgba(63, 15, 87, 0.7));
+    background: linear-gradient(to right, rgba(156, 39, 176, 0.7), rgba(63, 15, 87, 0.7)); 
     padding: 15px 30px;
-    height: 80px;
 }
 
 .header-container {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto 1fr auto; 
     align-items: center;
     grid-template-rows: 85px;
+    height: auto;
 }
 
-.logo-image {
+.main-title, h2, p {
+    text-align: center;
+}
+
+.main-title, h2 {
+    color: #e270f6;
+}
+
+.logo-image { 
     height: 90px;
     width: auto;
 }
@@ -47,30 +55,38 @@ nav {
     align-items: center;
 }
 
-.secondary-menu {
-    margin-top: 5px;
+nav a:hover {
+    color: #ba68c8; 
 }
 
-nav .main-menu a,
-nav .secondary-menu a {
+.main-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; 
+    display: inline-flex; 
+}
+
+.main-menu a {
     text-decoration: none;
-    color: #ffffff;
-    font-size: 35px;
+    color: #ffffff; 
+    font-weight: bold;
+    font-size: 35px; 
     transition: color 0.3s;
 }
 
-nav .main-menu a {
-    font-weight: bold;
+.secondary-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; 
+    display: inline-flex; 
+    margin-top: 10px;
 }
 
-nav .secondary-menu a {
-    color: #d4d4d4;
-    font-size: 20px;
-}
-
-nav .main-menu a:hover,
-nav .secondary-menu a:hover {
-    color: #ba68c8;
+.secondary-menu a {
+    text-decoration: none;
+    color: #bab9b9; 
+    font-size: 25px;
+    transition: color 0.3s;
 }
 
 .social-media {
@@ -79,35 +95,14 @@ nav .secondary-menu a:hover {
 }
 
 .social-icon {
-    width: 50px; 
+    width: 50px;
     height: auto; 
-    margin-left: 15px;
-    transition: transform 0.3s; 
+    margin-left: 15px; 
+    transition: transform 0.3s;
 }
 
 .social-icon:hover {
     transform: scale(1.1); 
-}
-
-h1 {
-    font-size: 50px;
-    color: #f0a3fd;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    text-align: center;
-}
-
-h2 {
-    color: #f0a3fd;
-    text-align: center;
-}
-
-p {
-    text-align: center;
-    color: #ffffff;
-}
-
-ul {
-    color: #ffffff;
 }
 
 main {
@@ -233,8 +228,157 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px;
-    background: rgba(63, 15, 87, 0.8);
+    padding: 15px 20px;
+    background: rgba(63, 15, 87, 0.8); 
     width: 100%;
     height: 70px;
+    margin: 0 auto; 
+    text-align: center;
+}
+
+@media (max-width: 767px) { /* Телефоны */
+    header { 
+        padding: 10px 3px;
+        width: 100%;
+    }
+
+    .header-container {
+        width: 95%;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto; 
+    }
+
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .logo-image {
+        height: 50px;
+    }
+
+    .main-menu a {
+        font-size: 15px;
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+    .secondary-menu a {
+        font-size: 10px;
+        color: #bab9b9;
+    }
+
+    .social-media {
+        margin-left: auto; 
+        flex-direction: column;
+    }
+
+    .social-icon {
+        width: 20px; 
+        margin-left: 5px;
+    }
+
+    main {
+        grid-template-columns: 95%;
+        grid-template-rows: repeat(10, auto);
+        grid-template-areas:
+            "title-container"
+            "game-overview"
+            "game-rules"
+            "game-strategy"
+            "game-history"
+            "game-glossary"
+            "play-now"
+            "faq"
+            "game-versions"
+            "game-alternatives";
+        gap: 20px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 18px; 
+        text-align: center;
+    }
+
+    p, ul {
+        font-size: 14px;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    .title-container {
+        width: 85%;
+        margin-bottom: 10px;
+        height: 30px;
+        padding-top: 0%;
+    }
+
+    .main-title {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    footer {
+        padding: 10px 10px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) { /* Планшеты */
+
+    .social-icon {
+        width: 45px;
+    }
+
+    .main {
+        grid-template-columns: 65%; 
+        grid-template-rows: repeat(10, auto);
+        grid-template-areas:
+            "title-container"
+            "game-overview"
+            "game-rules"
+            "game-strategy"
+            "game-history"
+            "game-glossary"
+            "play-now"
+            "faq"
+            "game-versions"
+            "game-alternatives";
+        gap: 20px; 
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title-container {
+        width: 92%;
+        margin-bottom: 10px;
+        height: 50px;
+        padding-top: 0%;
+    }
+
+    .main-title {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 25px; 
+        text-align: center;
+    }
+
+    p, ul {
+        font-size: 18px;
+    }
+
+    p {
+        text-align: center;
+    }
 }
