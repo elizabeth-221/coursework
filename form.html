@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="form_styles.css">
+    <link rel="stylesheet" href="css/form_styles.css">
     <title>Форма для обратной связи</title>
 </head>
 <body>
     <header>
         <div class="header-container">
             <div class="logo">
-                <a href="web-site.html"><img src="лого.png" alt="Логотип" class="logo-image"></a>
+                <img src="img/лого.png" alt="Логотип" class="logo-image">
             </div>
             <nav>
-                <div class="main-menu">
-                    <a href="web-site.html">Вернуться на главную</a>
-                </div>
-                <div class="secondary-menu">
-                    <a href="tictac.html">Крестики-нолики</a>
-                </div>
+                <ul class="main-menu">
+                    <li class="title">Головоломки</li>
+                </ul>
+                <ul class="secondary-menu">
+                    <li><a href="web-site.html">Вернуться на главную</a></li>
+                </ul>
             </nav>
             <div class="social-media">
-                <a href="#"><img src="fb.png" alt="Facebook" class="social-icon"></a>
-                <a href="#"><img src="tg.png" alt="Telegram" class="social-icon"></a>
-                <a href="#"><img src="vk.png" alt="VK" class="social-icon"></a>
+                <a href="#"><img src="img/fb.png" alt="Facebook" class="social-icon"></a>
+                <a href="#"><img src="img/tg.png" alt="Telegram" class="social-icon"></a>
+                <a href="#"><img src="img/vk.png" alt="VK" class="social-icon"></a>
             </div>
         </div>
     </header>
@@ -62,7 +62,7 @@
 
                     <label for="design-rating">Оцените дизайн <span class="required">*</span>:</label>
                     <select id="design-rating" name="design-rating" required>
-                        <option value="0">0</option>
+                        <option value="">0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -72,7 +72,7 @@
 
                     <label for="functionality-rating">Оцените функционал <span class="required">*</span>:</label>
                     <select id="functionality-rating" name="functionality-rating" required>
-                        <option value="0">0</option>
+                        <option value="">0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -82,7 +82,7 @@
 
                     <label for="game-quality-rating">Оцените качество игр <span class="required">*</span>:</label>
                     <select id="game-quality-rating" name="game-quality-rating" required>
-                        <option value="0">0</option>
+                        <option value="">0</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>

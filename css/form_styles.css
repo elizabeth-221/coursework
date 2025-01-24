@@ -1,0 +1,268 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url("C:/Users/А988/Documents/Курс_1/Основы веб-технологий/coursework/img/space.png");
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    color: #ffffff; 
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+html { 
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed; 
+    top: 0;
+    left: 0; 
+    right: 0;
+    z-index: 100;
+    background: linear-gradient(to right, rgba(156, 39, 176, 0.7), rgba(63, 15, 87, 0.7)); 
+    padding: 15px 30px;
+}
+
+.header-container {
+    display: grid;
+    grid-template-columns: auto 1fr auto; 
+    align-items: center;
+    grid-template-rows: 85px;
+    height: auto;
+}
+
+.logo-image { 
+    height: 90px;
+    width: auto;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav a:hover {
+    color: #ba68c8; 
+}
+
+.main-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; 
+    display: inline-flex;
+    margin-top: 5px; 
+}
+
+.title {
+    font-size: 50px;
+    font-weight: bold; 
+    color: #ffffff;
+}
+
+.secondary-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; 
+    display: inline-flex; 
+}
+
+.secondary-menu a {
+    text-decoration: none;
+    color: #bab9b9; 
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.social-media {
+    display: flex; 
+    align-items: center; 
+}
+
+.social-icon {
+    width: 50px;
+    height: auto; 
+    margin-left: 15px; 
+    transition: transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); 
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 180px; 
+    margin-bottom: 50px;
+}
+
+.form-section {
+    background-color: rgba(118, 100, 234, 0.8);
+    color: #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto; 
+    width: 90%; 
+    max-width: 500px; 
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 20px rgb(115, 0, 255),
+                0 0 40px rgba(115, 0, 255, 0.8),
+                0 0 80px rgba(115, 0, 255, 0.6);
+    text-align: left; 
+}
+
+.form-title {
+    margin-bottom: 15px;
+    font-size: 33px;
+    color: #e270f6;
+    text-align: center; 
+}
+
+.fieldset-title {
+    margin-bottom: 15px;
+    font-size: 27px;
+    color: #f0a3fd;
+    text-align: center;
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feedback-form fieldset {
+    border: none; 
+    margin: 15px 0; 
+}
+
+.feedback-form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.required {
+    color: red;
+}
+
+.feedback-form input,
+.feedback-form textarea,
+.feedback-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.feedback-form input::placeholder,
+.feedback-form textarea::placeholder {
+    color: #ffffff; 
+    opacity: 0.8; 
+}
+
+.feedback-form button.submit-button {
+    background-color: #d616f8;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px; 
+    width: 250px;
+    font-size: 16px;
+}
+
+.feedback-form button.submit-button:hover {
+    background-color: #9c27b0;
+    transform: scale(1.1);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    background: rgba(63, 15, 87, 0.8); 
+    width: 100%;
+    height: 70px;
+    margin: 0 auto; 
+    text-align: center;
+}
+
+@media (max-width: 767px) { /* Телефоны */
+    
+    header { 
+        padding: 10px 3px;
+        width: 100%;
+    }
+
+    .header-container {
+        width: 95%;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto; 
+    }
+
+    .logo-image {
+        height: 50px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .secondary-menu a {
+        font-size: 10px;
+    }
+
+    .social-media {
+        margin-left: auto; 
+        flex-direction: column;
+    }
+
+    .social-icon {
+        width: 20px; 
+        margin-left: 5px;
+    }
+
+    .form-section {
+        width: 75%;
+    }
+
+    .form-title {
+        font-size: 28px;
+    }
+
+    .fieldset-title {
+        font-size: 22px;
+    }
+
+    .feedback-form label {
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 10px 10px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .form-section {
+        width: 50%;
+    }
+
+    .social-icon {
+        width: 45px;
+    }
+}
