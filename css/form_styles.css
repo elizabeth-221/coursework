@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url("C:/Users/А988/Documents/Курс_1/Основы веб-технологий/coursework/img/space.png");
+    background-image: url("../media/space.png");
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat;
@@ -81,7 +81,28 @@ nav a:hover {
 
 .social-media {
     display: flex; 
-    align-items: center; 
+    align-items: center;
+    position: relative; 
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    top: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(63, 15, 87, 0.8);
+    color: #ffffff; 
+    padding: 8px 12px;
+    border-radius: 5px;
+    z-index: 1;
+    white-space: nowrap;
+    font-size: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.social-media a:hover .tooltip {
+    display: block;
 }
 
 .social-icon {
@@ -249,6 +270,20 @@ footer {
 
     .feedback-form label {
         font-size: 14px;
+    }
+
+    .tooltip {
+        font-size: 0.8rem;
+        transform: translate(-50%, -100%);
+        top: 100%;
+        width: auto;
+    }
+
+    .social-media a:hover .tooltip {
+        left: auto; 
+        top: 110%;
+        right: 0;
+        transform: translate(0, 10px);
     }
 
     footer {

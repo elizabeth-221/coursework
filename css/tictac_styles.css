@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url('C:/Users/А988/Documents/Курс_1/Основы веб-технологий/coursework/img/space.png');
+    background-image: url('../media/space.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -33,6 +33,10 @@ header {
 }
 
 .main-title, h2, p {
+    text-align: center;
+}
+
+.video-section h3 {
     text-align: center;
 }
 
@@ -90,6 +94,27 @@ nav a:hover {
 .social-media {
     display: flex; 
     align-items: center; 
+    position: relative;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    top: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(63, 15, 87, 0.8);
+    color: #ffffff; 
+    padding: 8px 12px;
+    border-radius: 5px;
+    z-index: 1;
+    white-space: nowrap;
+    font-size: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.social-media a:hover .tooltip {
+    display: block;
 }
 
 .social-icon {
@@ -179,33 +204,31 @@ main {
 .play-now:hover,
 .game-versions:hover,
 .game-alternatives:hover {
-    transform: translateY(-10px); /* Поднимаем элементы */
-    box-shadow: 0 0 40px rgb(115, 0, 255), /* Более яркое свечение */
+    transform: translateY(-10px);
+    box-shadow: 0 0 40px rgb(115, 0, 255),
                 0 0 60px rgba(204, 153, 255, 0.7), 
                 0 0 80px rgba(204, 153, 255, 0.4);
 }
 
-/* Стиль для всех карточек */
 .card {
-    background-color: rgba(118, 100, 234, 0.8); /* Цвет фона */
+    background-color: rgba(118, 100, 234, 0.8);
     color: #e0e0e0;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 20px rgba(204, 153, 255, 1),
                 0 0 30px rgba(204, 153, 255, 0.7),
                 0 0 60px rgba(204, 153, 255, 0.4);
-    transition: transform 0.6s ease, box-shadow 0.3s ease; /* Скорость анимации */
-    perspective: 1000px; /* Установка перспективы для 3D-эффекта */
+    transition: transform 0.6s ease, box-shadow 0.3s ease;
+    perspective: 1000px;
 }
 
 .card:hover {
-    transform: translateY(-10px) rotateY(15deg) rotateX(10deg) scale(1.05); /* Подъем, вращение и масштабирование */
+    transform: translateY(-10px) rotateY(15deg) rotateX(10deg) scale(1.05); 
     box-shadow: 0 0 40px rgba(204, 153, 255, 1),
                 0 0 60px rgba(204, 153, 255, 0.7),
                 0 0 80px rgba(204, 153, 255, 0.4);
 }
 
-/* Специфичный стиль для карточки Game overview */
 .game-overview {
     background-color: rgba(193, 98, 252, 0.7);
     border-radius: 10px;
@@ -213,8 +236,8 @@ main {
 }
 
 .game-overview:hover {
-    transform: rotateY(360deg); /* Вращение вокруг своей оси */
-    transition: transform 1s ease; /* Более медленная анимация вращения */
+    transform: rotateY(360deg); 
+    transition: transform 1s ease;
     box-shadow: 0 0 40px rgba(204, 153, 255, 1);
 }
 
@@ -234,6 +257,33 @@ main {
     border-radius: 10px; 
     box-shadow: 0 0 20px rgba(115, 0, 255, 0.7);
     margin-bottom: 40px;
+}
+
+.video-section {
+    position: relative; 
+    overflow: hidden; 
+}
+
+.game-video {
+    width: 100%; 
+    max-width: 800px; 
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(204, 153, 255, 0.7),
+                0 0 40px rgba(204, 153, 255, 0.5), 
+                0 0 60px rgba(204, 153, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-section:hover .game-video {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(204, 153, 255, 1),
+                0 0 60px rgba(204, 153, 255, 0.7), 
+                0 0 80px rgba(204, 153, 255, 0.5);
+}
+
+
+.game-video:hover {
+    transform: scale(1.05);
 }
 
 footer {
@@ -335,6 +385,28 @@ footer {
     .main-title {
         font-size: 20px;
         text-align: center;
+    }
+
+    .video-section {
+        margin: 20px 0;
+    }
+
+    .game-video {
+        max-width: 100%;
+    }
+
+    .tooltip {
+        font-size: 0.8rem;
+        transform: translate(-50%, -100%);
+        top: 100%;
+        width: auto;
+    }
+
+    .social-media a:hover .tooltip {
+        left: auto; 
+        top: 110%;
+        right: 0;
+        transform: translate(0, 10px);
     }
 
     footer {

@@ -9,21 +9,32 @@
 <body>
     <header>
         <div class="header-container">
+
             <div class="logo">
-                <a href="web-site.html"><img src="img/лого.png" alt="Логотип" class="logo-image"></a>
+                <img src="media/лого.png" alt="Логотип" class="logo-image">
             </div>
+
             <nav>
                 <ul class="main-menu">
                     <li class="title">Головоломки</li>
                 </ul>
                 <ul class="secondary-menu">
-                    <li><a href="web-site.html">Вернуться на главную</a></li>
+                    <li><a href="index.html">Вернуться на главную</a></li>
                 </ul>
             </nav>
             <div class="social-media">
-                <a href="#"><img src="img/fb.png" alt="Facebook" class="social-icon"></a>
-                <a href="#"><img src="img/tg.png" alt="Telegram" class="social-icon"></a>
-                <a href="#"><img src="img/vk.png" alt="VK" class="social-icon"></a>
+                <a href="#">
+                    <img src="media/fb.png" alt="" class="social-icon">
+                    <span class="tooltip">Перейти в Facebook</span>
+                </a>
+                <a href="#">
+                    <img src="media/tg.png" alt="" class="social-icon">
+                    <span class="tooltip">Перейти в Telegram</span>
+                </a>
+                <a href="#">
+                    <img src="media/vk.png" alt="" class="social-icon">
+                    <span class="tooltip">Перейти в VK</span>
+                </a>
             </div>
         </div>
     </header>
@@ -34,7 +45,7 @@
         </div>
 
         <div class="game-overview">
-            <img src="img/ttt.PNG" alt="Крестики-нолики" class="game-image">
+            <img src="media/ttt.PNG" alt="Крестики-нолики" class="game-image">
             <p>Крестики-нолики - это классическая игра для двух игроков, в которой они, чередуясь, ставят свои знаки (X и O) на поле 3x3. Цель игры - первым собрать три своих знака в ряд: по горизонтали, вертикали или диагонали.</p>
         </div>
 
@@ -50,12 +61,14 @@
 
         <section class="game-strategy card">
             <h2>Стратегия для победы</h2>
-            <p>Чтобы увеличить свои шансы на победу в "Крестиках-ноликах", следуйте этим рекомендациям:</p>
-            <ul>
-                <li>Начинайте ходить с центра, если это возможно</li>
-                <li>Создавайте угрозы, которые заставляют противника блокировать ваши ходы</li>
-                <li>Обращайте внимание на потенциальные выигрыши для обеих сторон</li>
-            </ul>
+
+            <div class="video-section">
+                <h3>Смотрите, как играть в Крестики-нолики!</h3>
+                <video controls class="game-video">
+                    <source src="media/Стратегии.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает встроенные видео.
+                </video>
+            </div>
         </section>
 
         <section class="game-history card">
